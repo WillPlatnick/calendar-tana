@@ -2,10 +2,11 @@
 
 echo "%%tana%%"
 IFS=$'\n'
-events=$(ical-buddy-json.sh -d | jq -r '.[].title')
+json=$(ical-buddy-json.sh -d)
+events=$(echo $json | jq -r '.[].title')
 for event in $events; do
-  startat=$(ical-buddy-json.sh -d | jq -r ".[] | select(.title==\"${event}\") | .start_at")
-  endat=$(ical-buddy-json.sh -d | jq -r ".[] | select(.title==\"${event}\") | .end_at")
+  startat=$(echo $json | jq -r ".[] | select(.title==\"${event}\") | .start_at")
+  endat=$(echo $json | jq -r ".[] | select(.title==\"${event}\") | .end_at")
   if [[ $startat == "null" ]]; then
     startat="All Day Event"
     endat=""
