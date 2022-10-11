@@ -1,5 +1,7 @@
 # calendar-tana
 
+[Video](https://share.cleanshot.com/zoaoYM)
+
 This is a quick PoC to create an Agenda from your macOS calendar using iCalBuddy and bring them into Tana
 
 Special thanks to Joshua Priddle for ical-buddy-json.sh - https://josh.fail/2022/dump-calendar-app-events-to-json/
