@@ -11,7 +11,7 @@ Special thanks to Joshua Priddle for ical-buddy-json.sh - https://josh.fail/2022
 
 ```
 brew install jq
-brew install icalBuddy
+brew install ical-buddy
 mkdir -p ~/workspace
 cd ~/workspace
 git clone https://github.com/WillPlatnick/calendar-tana.git
